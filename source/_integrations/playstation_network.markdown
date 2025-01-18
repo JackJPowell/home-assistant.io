@@ -43,9 +43,11 @@ The PlayStation Network integration lets you integrate information about your cu
   type: string
 {% endconfiguration_basic %}
 
-## Media Players
+## Supported Functionality
 
-- **PlayStation Console**: One Media Player will be created for any PlayStation 5 and one Media Player will be created for any PlayStation 4 console you have connected to the PlayStation Network.
+### Media Players
+
+- **PlayStation Console**: One Media Player will be created for any PlayStation 5 and one Media Player will be created for any PlayStation 4 console you have connected to the PlayStation Network. The artwork and title of the currently playing game will be populated.
 
 ## Data updates
 
@@ -58,6 +60,28 @@ PlayStation Network imposes a rate limit of 300 requests per 15 minutes.
 This integration makes 3 requests per data update (every 30 seconds). This presently is well under the rate limit, but leaves room to add additional requests as the integration develops.
 
 Please keep these limits in mind to avoid exceeding the PlayStation Network request allowance.
+
+The Active state for each device is only reported via the API for the last used device. For example, if you start playing a game on your PS4 and without powering down, launch a game on your PS5, the API will only report your PS5 status.
+
+## Supported devices
+
+The following devices are known to be supported by the integration:
+
+- PlayStation 5
+- PlayStation 4
+
+## Unsupported devices
+
+The following devices are not supported by the integration:
+
+- PlayStation 3
+- PlayStation Vita
+- PlayStation Portable
+- Other PlayStation system variants (PlayStation TV) or older systems that do not support the PlayStation Network
+
+## Use Cases
+
+You can display your currently playing game as artwork on your dashboard. You can also send notifications of your currently playing game to others inviting them to join you.
 
 ## Remove integration
 
